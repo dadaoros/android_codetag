@@ -47,5 +47,9 @@ public class ArchivoDatos {
         f.write(correo2.getBytes());
         f.write(pass2.getBytes());
     }
+    public boolean validarUsuario(String username, String password){
+
+        return false;
+    }
 
 }

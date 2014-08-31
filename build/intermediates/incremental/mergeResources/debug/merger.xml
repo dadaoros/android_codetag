@@ -50,9 +50,15 @@
                 </string>
                 <string name="pass" >Contraseña:
                 </string>
-                <string name="app_name" >Android Login
+                <string name="app_name" >Android Sign-in
                 </string>
                 <string name="log_in" >Ingresar
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="title_activity_home" >home
+                </string>
+                <string name="login_ok" >Ingresaste satisfactoriamente a la aplicación! :)
                 </string>
             </file>
             <file
@@ -77,6 +83,16 @@
             <file
                 name="pruebas"
                 path="/root/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/pruebas.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="home"
+                path="/root/AndroidStudioProjects/MyApplication2/app/src/main/res/menu/home.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="activity_home"
+                path="/root/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_home.xml"
                 qualifiers=""
                 type="layout" />
         </source>
