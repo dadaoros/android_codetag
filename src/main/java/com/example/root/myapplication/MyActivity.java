@@ -15,7 +15,7 @@ import db.ArchivoDatos;
 
 public class MyActivity extends Activity {
     private ArchivoDatos db;
-    private TextView username, password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,9 +42,10 @@ public class MyActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
     public void acceder(View view){
-        username = (EditText)findViewById(R.id.emailField);
-        password = (EditText)findViewById(R.id.passField);
-        if(db.validarUsuario((String)username.getText(),(String)password.getText())) {
+        String user, pass;
+       user =((EditText)findViewById(R.id.emailField)).toString();
+        pass = ((EditText)findViewById(R.id.passField)).toString();
+        if(db.validarUsuario(user,pass)) {
             Intent i = new Intent(this, home.class);
             startActivity(i);
         }else

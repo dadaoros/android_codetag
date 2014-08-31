@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/passField"
         android:background="#ffe3e3e3"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"

@@ -4,6 +4,7 @@ import android.content.Context;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -48,8 +49,25 @@ public class ArchivoDatos {
         f.write(pass2.getBytes());
     }
     public boolean validarUsuario(String username, String password){
+        boolean validated=false;
+        /*
+        try {
+            FileInputStream f= context.openFileInput(nombreArchivo);
+            BufferedReader entrada = new BufferedReader(new InputStreamReader(f));
+            String linea;
+            int contador=0;
+            do{
+                contador++;
+                linea=entrada.readLine();
+                if(linea==username)validated=true;
 
-        return false;
+            }while(linea!= null);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+        return validated;
     }
 
 }

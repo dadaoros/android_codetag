@@ -56,9 +56,9 @@
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
-                <string name="title_activity_home" >home
-                </string>
                 <string name="login_ok" >Ingresaste satisfactoriamente a la aplicación! :)
+                </string>
+                <string name="title_activity_home" >home
                 </string>
             </file>
             <file
