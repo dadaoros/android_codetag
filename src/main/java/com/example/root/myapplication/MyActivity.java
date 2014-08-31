@@ -42,13 +42,15 @@ public class MyActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
     public void acceder(View view){
-        String user, pass;
-       user =((EditText)findViewById(R.id.emailField)).toString();
-        pass = ((EditText)findViewById(R.id.passField)).toString();
-        if(db.validarUsuario(user,pass)) {
+
+        EditText user =((EditText)findViewById(R.id.emailField));
+        EditText pass = ((EditText)findViewById(R.id.passField));
+
+        //Toast.makeText(this,db.validarUsuario(user.getText().toString(),pass.getText().toString()),Toast.LENGTH_SHORT).show();
+        if(db.validarUsuario(user.getText().toString(),pass.getText().toString())) {
             Intent i = new Intent(this, home.class);
             startActivity(i);
         }else
-            Toast.makeText(this,"password incorrecto",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"usuario o password incorrecto",Toast.LENGTH_SHORT).show();
     }
 }

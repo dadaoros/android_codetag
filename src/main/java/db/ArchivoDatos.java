@@ -27,7 +27,7 @@ public class ArchivoDatos {
 
         FileOutputStream f;
         try{
-            f = this.context.openFileOutput(nombreArchivo,Context.MODE_APPEND);
+            f = this.context.openFileOutput(nombreArchivo,Context.MODE_PRIVATE);
             escribirArchivo(f);
         }catch (FileNotFoundException e){
             Log.e("NO hay archivo, se creara uno ", e.getMessage());
@@ -41,8 +41,8 @@ public class ArchivoDatos {
         } catch (IOException e) {e.printStackTrace();}
     }
     private void escribirArchivo(FileOutputStream f) throws IOException {
-        String correo1="dadaoros@hotmail.com", correo2="usuario@correo.com";
-        String pass1="12345", pass2="00000";
+        String correo1="dadaoros@hotmail.com\r\n", correo2="usuario@correo.com\n";
+        String pass1="12345\n", pass2="00000\n";
         f.write(correo1.getBytes());
         f.write(pass1.getBytes());
         f.write(correo2.getBytes());
@@ -50,23 +50,21 @@ public class ArchivoDatos {
     }
     public boolean validarUsuario(String username, String password){
         boolean validated=false;
-        /*
+        String linea="vacio";
         try {
             FileInputStream f= context.openFileInput(nombreArchivo);
             BufferedReader entrada = new BufferedReader(new InputStreamReader(f));
-            String linea;
-            int contador=0;
             do{
-                contador++;
                 linea=entrada.readLine();
-                if(linea==username)validated=true;
+                if(username.equals(linea))
+                    if(password.equals(entrada.readLine()))validated = true;
 
             }while(linea!= null);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
         return validated;
     }
 
